@@ -9,8 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ImcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ImcApplication.class, args);
 		Scanner sc = new Scanner(System.in);
+		SpringApplication.run(ImcApplication.class, args);
+		
 
 		System.out.println("Ingrese su peso en kilos(con coma):");
 		double peso = sc.nextDouble();
