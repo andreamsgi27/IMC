@@ -30,8 +30,8 @@ public class ImcApplication {
 
 	public static String calcularIMC (double peso, double altura) {
 		double imc = peso / (altura * altura);
-		if (imc <= 0){
-			return "No es un valor válido";
+		if (peso <= 0 || altura <= 0){
+			return "Peso y altura deben ser mayores a 0";
 		}else if (imc < 16) {
 			return "Delgadez Severa";
 		} else if (imc < 17) {
@@ -46,10 +46,8 @@ public class ImcApplication {
 			return "Obesidad Leve";
 		} else if (imc < 40){
 			return "Obesidad Moderada";
-		} else if  (imc >= 40) {
-			return "Obesidad Mórbida";
 		} else {
-			return "Error";
+			return "Obesidad Mórbida";
 		}
 	}
 
